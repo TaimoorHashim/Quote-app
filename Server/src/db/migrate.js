@@ -20,7 +20,6 @@ try {
   );
   await conn.query(`USE \`${process.env.DB_NAME}\``);
   await conn.query(read("schema.sql"));
-  await conn.query(read("seed.sql"));
   console.log("Database ready.");
 } catch (err) {
   console.error("Migration failed:", err.message);
